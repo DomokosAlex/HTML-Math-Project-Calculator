@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometria számológép</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=M+PLUS+1p&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="../css/trigonometria.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <header class="container-fluid bg-primary text-white p-3">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4">
+               <a href="index.html" target="_blank"><p class="text-center"><button class="btn btn-primary"> <h4><i class="bi bi-arrow-left"></i> Főoldal</h4></button></p> </a>
+            </div>
+
+            <div class=" col-md-4 col-lg-4 text-center">
+                <h1>Trigonometria számológép</h1>
+                <h5>"A tiszta matematika, a maga módján, a logikai gondolatok költészete." — Albert Einstein</h5>
+            </div>
+
+            <div class=" col-md-4 col-lg-4">
+                <p class="text-center"><img class="img-fluid" src="../img/fej/einstein.svg" alt="Einstein">
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="margbot">
+        <div class="container text-center text-white">
+            <div class="row my-5">
+
+                <div class="col-xl-4 col-lg-12">
+                    <h2>Fok Konverzió</h2>
+                    <h2 id="fok" class="my-3">-</h2>
+                    <button class="btn btn-primary gomb my-3 p-3 btn-lg" onclick ="FokRad(false)" ><i class="bi bi-file-person"></i> Saját érték</button>
+                    <button class="btn btn-info gomb my-3 p-3 btn-lg" onclick ="FokRad(true)"><i class="bi bi-patch-question"></i> Random érték</button>
+                </div>
+
+                <div class="col-xl-4 col-lg-12">
+                    <h2>Koszinusz tétel</h2>
+                    <h2 id="kosz" class="my-3">-</h2>
+                    
+                    <button class="btn btn-primary gomb my-3 p-3 btn-lg" onclick="Koszinusztet(false)"><i class="bi bi-file-person"></i> Saját érték</button>
+                    <button class="btn btn-info gomb my-3 p-3 btn-lg" onclick="Koszinusztet(true)"><i class="bi bi-patch-question"></i> Random érték</button>
+                </div>
+
+
+                <div class="col-xl-4 col-lg-12">
+                    <h2>Szögfüggvények</h2>
+                    <h2 id="szog" class="my-3">-</h2>
+                    <button class="btn btn-primary gomb my-3 p-3 btn-lg" onclick="SzFuggvenyek(false, true)"><i class="bi bi-file-person"></i> Saját érték</button>
+                    <button class="btn btn-info gomb my-3 p-3 btn-lg" onclick="SzFuggvenyek(true, true)"><i class="bi bi-patch-question"></i> Random érték</button>
+                </div>
+                
+                <hr>
+            </div>
+            
+            <br>
+
+            <div class="row">
+
+                <div class="col-xl-4 col-lg-12">
+                    <h2>Inverse Szögfüggvények</h2>
+                    <h2 id="inv" class="my-3">-</h2>
+                    <button class="btn btn-primary gomb my-3 p-3 btn-lg" onclick="Inverse(false)"><i class="bi bi-file-person"></i> Saját érték</button>
+                    <button class="btn btn-info gomb my-3 p-3 btn-lg" onclick="Inverse(true)"><i class="bi bi-patch-question"></i> Random érték</button>
+                </div>
+                    
+
+                <div class="col-xl-4 col-lg-12">
+                    <h2>Torony Magasság</h2>
+                    <h2 id="torony" class="my-3">-</h2>
+                    
+                    <button class="btn btn-primary gomb my-3 p-3 btn-lg" onclick="Torony(false)"><i class="bi bi-file-person"></i> Saját érték</button>
+                    <button class="btn btn-info gomb my-3 p-3 btn-lg" onclick="Torony(true)"><i class="bi bi-patch-question"></i> Random érték</button>
+                </div>
+
+
+                <div class="col-xl-4 col-lg-12">
+                    <h2> Háromszög magassága</h2>
+                    <h2 id="magass" class="my-3">-</h2>
+                    <button class="btn btn-primary gomb my-3 p-3 btn-lg" onclick="Magassag(false)"><i class="bi bi-file-person"></i> Saját érték</button>
+                    <button class="btn btn-info gomb my-3 p-3 btn-lg" onclick="Magassag(true)"><i class="bi bi-patch-question"></i> Random érték</button>
+                </div>
+                
+
+                <div class="row g-3">
+
+                    <div class="col-xl-4 col-lg-12"></div>
+                    <div class="col-xl-4 col-lg-12">
+                    <button onclick="TenyGen(5)" class="btn btn-info my-3">Érdekes tények: </button>
+
+                    </div>
+                    <div class="col-xl-4 col-lg-12"></div>
+                </div>    
+
+            <div class="row">
+
+                <div class="col-xl-4 col-lg-12">
+                    <h4 id="teny1" class="my-4">-</h4>
+                </div>  
+
+                <div class="col-xl-4 col-lg-12">
+                    <h4 id="teny2" class="my-4">-</h4>
+                </div>
+    
+                <div class="col-xl-4 col-lg-12">
+                    <h4 id="teny3" class="my-4">-</h4>
+                </div>
+    
+            </div>
+                
+
+
+
+        
+
+        </div>
+    </main>
+
+    <footer class="bg-primary container-fluid text-center text-white">
+        <div class="row p-3 mt-5">
+
+            <div class="col-sm-12 col-md-4">
+                <i> <h3 class="my-3">Elérhetőségek:</h3></i>
+
+                <p><a href="https://www.instagram.com/d.alexcz/profilecard/?igsh=cWk0MnQ5eWc1ZDBo"><i class="bi bi-instagram"></i> Instagram</a></p>
+                <p><a href="https://www.facebook.com/share/12Df3P822PQ/"><i class="bi bi-facebook"></i> Facebook</a></p>
+                <p><a href="https://github.com/DomokosAlex"><i class="bi bi-github"></i> Github</a></p>
+            </div>
+
+            <div class="col-sm-12 col-md-4">
+                <i><h3 class="my-3">Készitette: </h3></i>
+                <p><i class="bi bi-code-slash"></i> Domokos Alex</p>
+            </div>
+
+            <div class="col-sm-12 col-md-4">
+                <i>
+                    <h3 class="my-3">Fontosabb források:</h3>
+                </i>
+                <p><a href="https://svgcreator.com/"><i class="bi bi-filetype-svg"></i> SVG converter</a></p>
+                <p><a href="https://www.wolframalpha.com"><i class="bi bi-calculator"></i> Wolframalpha</a></p>
+                <p><a href="https://www.code4you.hu/wp-login.php?redirect_to=%2F"><i class="bi bi-journal-code"></i></i> Code4You</a></p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+    <script src="../js/index.js"></script>
+</body>
+</html>

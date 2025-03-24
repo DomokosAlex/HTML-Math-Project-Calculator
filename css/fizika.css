@@ -1,0 +1,31 @@
+* {
+    font-family: "Kanit";
+}
+
+
+h1 {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+a:hover{
+    color: gray;
+}
+
+body {
+    background-color: rgba(26, 26, 31, 0.9);
+    background-image: url("../img/backgrounds/physicsback.svg");
+    background-attachment: fixed;
+    backdrop-filter: blur(3px);
+
+}
+
+.margbot{
+
+    margin-bottom: 50px;
+}
